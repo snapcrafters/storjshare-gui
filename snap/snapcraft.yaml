@@ -1,0 +1,45 @@
+name: storjshare-gui
+version: 6.0.0
+summary:  Earn money by sharing your hard drive space
+description: |
+ Just download the Storj desktop application, and choose how much storage
+ to share.
+
+grade: stable
+confinement: strict
+
+parts:
+  storjshare-gui:
+    plugin: dump
+    source: https://github.com/Storj/storjshare-gui/releases/download/v6.0.0/storjshare-gui.amd64.deb
+    source-type: deb
+    after:
+      - desktop-gtk2
+    stage-packages:
+      - gconf2
+      - libasound2
+      - libgtk2.0-0
+      - libnotify4
+      - libnspr4
+      - libnss3
+      - libpulse0
+      - libxss1
+      - libxtst6
+
+apps:
+  storjshare-gui:
+    # Correct the TMPDIR path for Chromium Framework/Electron to
+    # ensure libappindicator has readable resources.
+    command: env TMPDIR=$XDG_RUNTIME_DIR PATH=/usr/local/bin:${PATH} ${SNAP}/bin/desktop-launch $SNAP/opt/storjshare/storjshare
+    desktop: usr/share/applications/storjshare.desktop
+    plugs:
+      - browser-support
+      - gsettings
+      - home
+      - mount-observe
+      - network
+      - network-bind
+      - opengl
+      - pulseaudio
+      - unity7
+      - x11
