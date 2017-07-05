@@ -5,7 +5,7 @@
 
 PROJECT=Storj
 REPO=storjshare-gui
-TYPE=deb
+TYPE=amd64.deb
 
 if [ -f OLD_VERSION ]; then
     source OLD_VERSION
