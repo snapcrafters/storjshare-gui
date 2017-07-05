@@ -11,7 +11,7 @@ confinement: strict
 parts:
   storjshare-gui:
     plugin: dump
-    source: UUU
+    source: https://github.com/Storj/storjshare-gui/releases/download/v6.1.0/storjshare-gui.amd64.deb
     source-type: deb
     after:
       - desktop-gtk2
