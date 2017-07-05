@@ -19,7 +19,7 @@ JSON=${PROJECT}-${REPO}.json
 curl -s https://api.github.com/repos/${PROJECT}/${REPO}/releases/latest > "${JSON}"
 
 # Get the version from the tag_name and the download URL.
-VERSION=$(jq . "${JSON}" | grep tag_name | cut -d'"' -f4 | sed s'/v//')
+VERSION=$(jq . "${JSON}" | grep tag_name | cut -d'"' -f4 | sed 's/v//')
 DEB_URL=$(cat "${JSON}" | jq -r ".assets[] | select(.name | test(\"${TYPE}\")) | .browser_download_url")
 DEB=$(basename "${DEB_URL}")
 rm -f "${JSON}" 2>/dev/null
@@ -37,6 +37,8 @@ fi
 if [ ${REBUILD} -eq 1 ]; then
     mv snap/snapcraft.yaml.new snap/snapcraft.yaml
     echo "OLD_VERSION=${VERSION}" > OLD_VERSION
+    git add snap/*
+    git add OLD_VERSION
     git commit -m "Version bumped to ${VERSION}"
     git push
 fi
