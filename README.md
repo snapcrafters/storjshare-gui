@@ -6,11 +6,9 @@
 
 <p align="center"><b>This is the snap for Storj Share GUI</b>, <i>"a way to earn money by sharing your hard drive space"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.</p>
 
-<!--
 <p align="center">
 <a href="https://build.snapcraft.io/user/snapcrafters/discord"><img src="https://build.snapcraft.io/badge/snapcrafters/discord.svg" alt="Snap Status"></a>
 </p>
--->
 
 ## Install
 
