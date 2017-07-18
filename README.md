@@ -7,7 +7,7 @@
 <p align="center"><b>This is the snap for Storj Share GUI</b>, <i>"a way to earn money by sharing your hard drive space"</i>. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.</p>
 
 <p align="center">
-<a href="https://build.snapcraft.io/user/snapcrafters/discord"><img src="https://build.snapcraft.io/badge/snapcrafters/discord.svg" alt="Snap Status"></a>
+<a href="https://build.snapcraft.io/user/snapcrafters/storjshare-gui"><img src="https://build.snapcraft.io/badge/snapcrafters/storjshare-gui.svg" alt="Snap Status"></a>
 </p>
 
 ## Install
@@ -25,9 +25,7 @@
 
 ## Remaining tasks
 
-Snapcrafters ([join us]()) are working to land snap install documentation and
-the [snapcraft.yaml](https://github.com/snapcrafters/storjshare-gui/blob/master/snap/snapcraft.yaml)
-upstream so Storj Share GUI can authoritatively publish future releases.
+Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) are working to land snap install documentation and the [snapcraft.yaml](https://github.com/snapcrafters/storjshare-gui/blob/master/snap/snapcraft.yaml) upstream so Storj Share GUI can authoritatively publish future releases.
 
   - [x] Fork the [Snapcrafters template](https://github.com/snapcrafters/fork-and-rename-me) repository to your own GitHub account
   - [x] Rename the forked Snapcrafters template repository
@@ -43,7 +41,7 @@ upstream so Storj Share GUI can authoritatively publish future releases.
   - [x] Update the install instructions in this `README.md`
   - [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
   - [x] Request your GitHub repository is forked to the Snapcrafters organisation and configured for automated builds
-  - [ ] Add the provided Snapcraft build badge to this `README.md`
+  - [x] Add the provided Snapcraft build badge to this `README.md`
   - [ ] Publish the snap in the Snap store stable channel
   - [ ] Update the install instructions in this `README.md`
   - [ ] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
