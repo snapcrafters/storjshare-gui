@@ -1,5 +1,5 @@
 name: storjshare-gui
-version: 6.1.0
+version: 6.4.0
 summary:  Earn money by sharing your hard drive space
 description: |
  Just download the Storj desktop application, and choose how much storage
@@ -11,7 +11,7 @@ confinement: strict
 parts:
   storjshare-gui:
     plugin: dump
-    source: https://github.com/Storj/storjshare-gui/releases/download/v6.1.0/storjshare-gui.amd64.deb
+    source: https://github.com/Storj/storjshare-gui/releases/download/v6.4.0/storjshare-gui.amd64.deb
     source-type: deb
     after:
       - desktop-gtk2
