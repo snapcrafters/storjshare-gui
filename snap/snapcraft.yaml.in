@@ -16,24 +16,27 @@ parts:
     after:
       - desktop-gtk2
     stage-packages:
-      - gconf2
       - libasound2
-      - libgtk2.0-0
+      - libgconf2-4
       - libnotify4
       - libnspr4
       - libnss3
+      - libpcre3
       - libpulse0
       - libxss1
       - libxtst6
 
 apps:
   storjshare-gui:
+    command: bin/desktop-launch $SNAP/opt/storjshare/storjshare
+    desktop: usr/share/applications/storjshare.desktop
     # Correct the TMPDIR path for Chromium Framework/Electron to
     # ensure libappindicator has readable resources.
-    command: env TMPDIR=$XDG_RUNTIME_DIR PATH=/usr/local/bin:${PATH} ${SNAP}/bin/desktop-launch $SNAP/opt/storjshare/storjshare
-    desktop: usr/share/applications/storjshare.desktop
+    environment:
+      TMPDIR: $XDG_RUNTIME_DIR
     plugs:
       - browser-support
+      - desktop
       - gsettings
       - home
       - mount-observe

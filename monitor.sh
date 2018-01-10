@@ -39,6 +39,4 @@ if [ ${REBUILD} -eq 1 ]; then
     echo "OLD_VERSION=${VERSION}" > OLD_VERSION
     git add snap/*
     git add OLD_VERSION
-    git commit -m "Version bumped to ${VERSION}"
-    git push
 fi
