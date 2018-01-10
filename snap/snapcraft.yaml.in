@@ -15,6 +15,10 @@ parts:
     source-type: deb
     after:
       - desktop-gtk2
+    prepare: |
+      execstack --clear-execstack opt/storjshare/storjshare
+    build-packages:
+      - execstack
     stage-packages:
       - libasound2
       - libgconf2-4
