@@ -41,6 +41,7 @@ apps:
     plugs:
       - browser-support
       - desktop
+      - desktop-legacy
       - gsettings
       - home
       - mount-observe
